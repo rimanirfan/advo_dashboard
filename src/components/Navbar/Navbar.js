@@ -4,7 +4,7 @@ import './Navbar.css';
 
 const Navbar = () => {
     return (
-        <div className="ui secondary menu">
+        <div className="ui secondary menu navbar">
             <div className="header item">
                 Our Company
             </div>
