@@ -4,6 +4,7 @@ import Navbar from './Navbar/Navbar';
 import Sidebar from './Sidebar/Sidebar';
 import BestSelling from './BestSelling/BestSelling';
 import TopCompetitor from './TopCompetitor/TopCompetitor';
+import SalesTurnover from './SalesTurnover/SalesTurnover';
 
 import './App.css';
 
@@ -30,11 +31,21 @@ class App extends React.Component {
         return (
             <div>
                 <Navbar />
-                <div className="flex flex_row">
-                    <div className="flex_item_one small">
+                <div className="flex">
+                    <div className="flex_item_one">
                         <Sidebar />
                     </div>
                     <div className="flex_item_nine content">
+                        <h1 className="header_app">Dashboard</h1>
+                        <div className="flex green_menu">
+                            <div className="flex_item_seven green_menu_header">Market Insights</div>
+                            <div className="flex">
+                                <div>icon</div>
+                                <div>Click Here for Help</div>
+                                <div>Up</div>
+                            </div>
+                        </div>
+                        <SalesTurnover />
                         <div className="flex">
                             <div className="flex_item_five"></div>
                             <div className="flex_item_five">
