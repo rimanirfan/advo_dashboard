@@ -1,11 +1,22 @@
 .ui.secondary.vertical.menu {
     margin:0;
-    height: calc(100vh - 66px);
-    width: 100px;
+    height: calc(100vh - 84px);
+    width: 72px;
     padding: 0;
     border-right: rgba(0,0,0,0.2) 0.5px solid;
 }
 
 .ui.secondary.vertical.menu .item {
     padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(161, 156, 156);
+}
+
+.ui.secondary.vertical.menu .item > img{
+    width: 20px !important;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 3px;
 }

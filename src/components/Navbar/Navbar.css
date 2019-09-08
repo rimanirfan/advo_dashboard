@@ -4,7 +4,39 @@
 }
 
 .ui.secondary.menu.navbar{
-    padding: 1rem 0;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     margin:0;
 }
+
+.ui.secondary.menu.navbar .company_logo_img{
+    width: 130px;
+    height: 30px;
+}
+
+.powered {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.ui.secondary.menu.navbar .small {
+    margin-left: 0.5rem;
+    width: 70px;
+    height: 18px;
+}
+
+.user_session {
+    text-align: center;
+    color: rgb(143, 140, 140);
+    align-items: center;
+}
+
+.icon {
+    color:rgb(143, 140, 140) !important;
+    font-size: 1.4rem;
+}
+
+.company_detail {
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
+

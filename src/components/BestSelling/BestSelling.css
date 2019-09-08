@@ -40,3 +40,7 @@
     height: 100%;
 }
 
+.active {
+    background: #FFE7BD;
+    align-items: center;
+}

@@ -8,10 +8,11 @@ import SalesTurnover from './SalesTurnover/SalesTurnover';
 
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp, faArrowDown, faBars, faUserCircle, faSignOutAlt} from '@fortawesome/free-solid-svg-icons';
 import bulb from '../assets/Help.png';
 import dots from '../assets/dots.svg';
 import cart from '../assets/cart.svg';
+import dashboardIcon from '../assets/dashboard_icon.svg';
 
 class App extends React.Component {
     
@@ -35,10 +36,10 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <Navbar FontAwesomeIcon={FontAwesomeIcon} faUserCircle={faUserCircle} faSignOutAlt={faSignOutAlt} />
                 <div className="flex">
                     <div className="">
-                        <Sidebar />
+                        <Sidebar dashboardIcon={dashboardIcon} FontAwesomeIcon={FontAwesomeIcon} faBars={faBars} />
                     </div>
                     <div className="flex_item_nine content">
                         <h1 className="header_app">Dashboard</h1>

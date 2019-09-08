@@ -2,11 +2,11 @@ import React from 'react';
 
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({dashboardIcon, FontAwesomeIcon, faBars}) => {
     return (
         <div className="ui secondary vertical menu">
-            <div className="item">Burger</div>
-            <div className="active item">Dashboard</div>
+            <div className="item"><FontAwesomeIcon icon={faBars} /></div>
+            <div className="active item dashboard_icon"><img src={dashboardIcon} alt="dashboard icon" /></div>
         </div>
     );
 };
