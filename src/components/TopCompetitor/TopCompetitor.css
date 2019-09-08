@@ -1,6 +1,7 @@
 .top_competitor {
     padding: 2rem;
-    margin: 2rem;
+    margin: 0 1rem;
+    margin-right: 0;
     background-color: #fff;
     border: rgba(0,0,0,0.2) 0.5px solid;
 }
