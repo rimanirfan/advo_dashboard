@@ -5,6 +5,8 @@ import Sidebar from './Sidebar/Sidebar';
 import BestSelling from './BestSelling/BestSelling';
 import TopCompetitor from './TopCompetitor/TopCompetitor';
 import SalesTurnover from './SalesTurnover/SalesTurnover';
+import Chart from './Chart/Chart';
+import Period from './Period/Period';
 
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,7 +15,6 @@ import bulb from '../assets/Help.png';
 import dots from '../assets/dots.svg';
 import cart from '../assets/cart.svg';
 import dashboardIcon from '../assets/dashboard_icon.svg';
-import Period from './Period/Period';
 
 class App extends React.Component {
     
@@ -31,7 +32,25 @@ class App extends React.Component {
             {id: 3, name: 'Minuman Biru', price: '5200', sold: 3},
             {id: 4, name: 'Minuman Putih', price: '8000', sold: 5},
             {id: 5, name: 'Minuman Pink', price: '10000', sold: 19},
-        ]
+        ],
+        chartData: {
+            labels: ['Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur', 'Sun'],
+            datasets: [
+                {
+                    label: '',
+                    data: [
+                        250000,
+                        450000,
+                        150000,
+                        300000,
+                        340000,
+                        200000,
+                        700000
+                    ],
+                    backgroundColor: '#37B04C'
+                }
+            ]
+        }
     };
 
     render() {
@@ -57,7 +76,9 @@ class App extends React.Component {
                         </div>
                         <SalesTurnover dots={dots} faArrowDown={faArrowDown} FontAwesomeIcon={FontAwesomeIcon} cart={cart} />
                         <div className="flex">
-                            <div className="flex_item_five"></div>
+                            <div className="flex_item_five">
+                                <Chart data={this.state.chartData} dots={dots} />
+                            </div>
                             <div className="flex_item_five">
                                 <div className="flex">
                                     <div className="flex_item_five">
