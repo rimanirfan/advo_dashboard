@@ -1,7 +1,34 @@
 .sales_turnover {
     margin: 2rem 0;
     padding: 1rem;
-    width: 20%;
+    width: 300px;
     background-color: #fff;
     border: rgba(0,0,0,0.2) 0.5px solid;
+}
+
+.sales_header {
+    color: rgb(177, 175, 175);
+    font-size: 1.2rem;
+}
+
+.sales_money {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: .5rem 0;
+}
+
+.sales_percent {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: rgb(177, 175, 175);
+}
+
+.sales_percent .percent {
+    color: red;
+    font-size: 1rem;
+    margin-right: 0.3rem;
+}
+
+.cart_icon {
+    width: 50px;
 }

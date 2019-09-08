@@ -8,9 +8,10 @@ import SalesTurnover from './SalesTurnover/SalesTurnover';
 
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import bulb from '../assets/Help.png';
 import dots from '../assets/dots.svg';
+import cart from '../assets/cart.svg';
 
 class App extends React.Component {
     
@@ -49,7 +50,7 @@ class App extends React.Component {
                                 <div className="content_item"><FontAwesomeIcon icon={faChevronUp} /></div>
                             </div>
                         </div>
-                        <SalesTurnover dots={dots} />
+                        <SalesTurnover dots={dots} faArrowDown={faArrowDown} FontAwesomeIcon={FontAwesomeIcon} cart={cart} />
                         <div className="flex">
                             <div className="flex_item_five"></div>
                             <div className="flex_item_five">
