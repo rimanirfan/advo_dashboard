@@ -7,6 +7,7 @@ import TopCompetitor from './TopCompetitor/TopCompetitor';
 import SalesTurnover from './SalesTurnover/SalesTurnover';
 import Chart from './Chart/Chart';
 import Period from './Period/Period';
+import PeriodModal from './PeriodModal/PeriodModal';
 
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -62,6 +63,7 @@ class App extends React.Component {
                         <Sidebar dashboardIcon={dashboardIcon} FontAwesomeIcon={FontAwesomeIcon} faBars={faBars} />
                     </div>
                     <div className="flex_item_nine content">
+                        <PeriodModal />
                         <div className="flex header_container">
                             <div className="header_app flex_item_seven">Dashboard</div>
                             <Period FontAwesomeIcon={FontAwesomeIcon} faChevronDown={faChevronDown} />

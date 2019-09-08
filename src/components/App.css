@@ -49,9 +49,11 @@
 
 .flex .flex_item_one {
     flex: 0 0 10%;
+    width: 10%;
 }
 
 .content {
+    position: relative;
     background: #f7f7f7;
     padding: 2rem;
     z-index: -1;
