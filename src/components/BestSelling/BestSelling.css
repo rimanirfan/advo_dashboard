@@ -1,16 +1,19 @@
 .best_selling {
-    padding: 2rem;
-    margin: 0 1rem;
+    padding: 1.3rem;
+    margin-left: 1.5rem;
     background-color: #fff;
     border: rgba(0,0,0,0.2) 0.5px solid;
 }
 
 .best_selling .header {
     text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #4D4F5C;
 }
 
 .best_selling .details_product {
     width: 100%;
+    padding: 1rem 0;
 }
 
 .best_selling .details_product h1 {
@@ -18,10 +21,22 @@
     margin: 0;
 }
 
+.best_selling .details_product .sold {
+    text-align: center;
+}
+
 .best_selling .product_card {
     border: rgba(0,0,0,0.1) 0.5px solid;
     border-radius: 5px;
-    padding: 1rem 0.5rem;
-    margin: 0.5rem 0; 
+    margin: 1rem 0; 
+}
+
+.img_product {
+    margin-right: 1rem;
+}
+
+.img_product img{
+    width: 100%;
+    height: 100%;
 }
 

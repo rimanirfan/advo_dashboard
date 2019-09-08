@@ -1,17 +1,19 @@
 .top_competitor {
-    padding: 2rem;
-    margin: 0 1rem;
-    margin-right: 0;
+    padding: 1.3rem;
+    margin-left: 1.5rem;
     background-color: #fff;
     border: rgba(0,0,0,0.2) 0.5px solid;
 }
 
 .top_competitor .header {
     text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #4D4F5C;
 }
 
 .top_competitor .details_competitor {
     width: 100%;
+    padding: 1rem 0;
 }
 
 .top_competitor .details_competitor h1 {
@@ -19,10 +21,22 @@
     margin: 0;
 }
 
+.top_competitor .details_competitor .sold {
+    text-align: center;
+}
+
+
 .top_competitor .competitor_card {
     border: rgba(0,0,0,0.1) 0.5px solid;
     border-radius: 5px;
-    padding: 1rem 0.5rem;
-    margin: 0.5rem 0; 
+    margin: 1rem 0; 
 }
 
+.img_competitor {
+    margin-right: 1rem;
+}
+
+.img_competitor img{
+    width: 100%;
+    height: 100%;
+}

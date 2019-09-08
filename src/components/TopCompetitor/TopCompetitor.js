@@ -1,18 +1,19 @@
 import React from 'react';
 
 import './TopCompetitor.css';
+import drink from '../../assets/minuman.jpg';
 
-const TopCompetitor = ({competitors}) => {
+const TopCompetitor = ({competitors, dots}) => {
         const renderedLIst = competitors.map((competitor) => {
             return (
                 <div key={competitor.id}>
                     <div className="competitor_card flex">
-                        <div className="img_competitor"></div>
+                        <div className="img_competitor flex_item_two"><img src={drink} alt="drink"/></div>
                         <div className="details_competitor">
                             <h1>{competitor.name}</h1>
                             <div className="flex">
                                 <div className="flex_item_five">Rp. {competitor.price} </div>
-                                <div className="flex_item_five">{competitor.sold}</div>
+                                <div className="flex_item_five sold">{competitor.sold}</div>
                             </div>
                         </div>
                     </div>
@@ -24,7 +25,7 @@ const TopCompetitor = ({competitors}) => {
             <div className="top_competitor">
                 <div className="flex">
                     <div className="flex_item_nine header">Top Competitor SKU</div>
-                    <div className="flex_item_one">3 dots</div>
+                    <div className=""><div className="dots"><img src={dots} alt="dots" /></div></div>
                 </div>
                 {renderedLIst}
             </div>

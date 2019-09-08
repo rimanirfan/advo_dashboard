@@ -37,7 +37,7 @@ class App extends React.Component {
             <div>
                 <Navbar />
                 <div className="flex">
-                    <div className="flex_item_one">
+                    <div className="">
                         <Sidebar />
                     </div>
                     <div className="flex_item_nine content">
