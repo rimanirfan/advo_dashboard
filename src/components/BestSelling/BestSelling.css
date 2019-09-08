@@ -1,0 +1,28 @@
+.best_selling {
+    padding: 2rem;
+    margin: 2rem;
+    width: 30%;
+    background-color: #fff;
+    border: rgba(0,0,0,0.2) 0.5px solid;
+}
+
+.best_selling .header {
+    text-transform: uppercase;
+}
+
+.best_selling .details_product {
+    width: 100%;
+}
+
+.best_selling .details_product h1 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.best_selling .product_card {
+    border: rgba(0,0,0,0.1) 0.5px solid;
+    border-radius: 5px;
+    padding: 1rem 0.5rem;
+    margin: 0.5rem 0; 
+}
+

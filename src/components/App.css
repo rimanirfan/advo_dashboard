@@ -1,0 +1,29 @@
+.ui.grid {
+    margin: 0;
+}
+
+.ui.grid>.column {
+    padding:0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex .flex_item_nine {
+    flex: 1 0 90%;
+}
+
+.flex .flex_item_one {
+    /* flex: 0 0 10%; */
+    width: 100px;
+}
+
+.flex .flex_item_five {
+    flex: 1 0 50%;
+}
+
+.content {
+    background: #f7f7f7;
+    z-index: -1;
+}
