@@ -25,6 +25,7 @@
 
 .flex .flex_item_seven {
     flex: 1 0 70%;
+    width: 70%;
 }
 
 .flex .flex_item_five {
@@ -50,7 +51,6 @@
     flex: 0 0 10%;
 }
 
-
 .content {
     background: #f7f7f7;
     padding: 2rem;
@@ -60,6 +60,10 @@
 .content .header_app {
     color: #707070;
     font-size: 3rem;
+}
+
+.content .header_container {
+    margin: 2rem 0;
 }
 
 .green_menu {
