@@ -10,8 +10,17 @@
     display: flex;
 }
 
+.flex_column {
+    flex-direction: column;
+}
+
 .flex .flex_item_nine {
     flex: 1 0 90%;
+}
+
+
+.flex .flex_item_five {
+    flex: 1 0 50%;
 }
 
 .flex .flex_item_one {
@@ -19,8 +28,8 @@
     width: 100px;
 }
 
-.flex .flex_item_five {
-    flex: 1 0 50%;
+.flex_item_two_half {
+    flex: 1 0 25%;
 }
 
 .content {
