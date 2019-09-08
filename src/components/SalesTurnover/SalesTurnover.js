@@ -3,12 +3,12 @@ import React from 'react';
 import './SalesTurnover.css';
 
 
-const SalesTurnover = () => {
+const SalesTurnover = ({dots}) => {
     return (
         <div className="sales_turnover">
             <div className="flex">
                 <div className="flex_item_seven">Sales Turnover</div>
-                <div>3 dots</div>
+                <div className="dots"><img src={dots} alt="dots" /></div>
             </div>
             <div className="flex">
                 <div className="details flex_item_seven">

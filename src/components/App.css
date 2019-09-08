@@ -6,6 +6,10 @@
     padding:0;
 }
 
+.dots {
+    width: 10px;
+}
+
 .flex {
     display: flex;
 }
@@ -56,4 +60,12 @@
 .green_menu_header {
     font-size: 1.5rem;
     text-transform: uppercase;
+}
+
+.green_menu_content {
+    
+}
+
+.green_menu_content .content_item {
+    margin: 0 .5rem;
 }

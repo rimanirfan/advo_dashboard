@@ -7,6 +7,10 @@ import TopCompetitor from './TopCompetitor/TopCompetitor';
 import SalesTurnover from './SalesTurnover/SalesTurnover';
 
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import bulb from '../assets/Help.png';
+import dots from '../assets/dots.svg';
 
 class App extends React.Component {
     
@@ -39,22 +43,22 @@ class App extends React.Component {
                         <h1 className="header_app">Dashboard</h1>
                         <div className="flex green_menu">
                             <div className="flex_item_seven green_menu_header">Market Insights</div>
-                            <div className="flex">
-                                <div>icon</div>
-                                <div>Click Here for Help</div>
-                                <div>Up</div>
+                            <div className="flex green_menu_content">
+                                <div className="content_item"><img src={bulb} alt="bulb icon" /></div>
+                                <div className="content_item">Click Here for Help</div>
+                                <div className="content_item"><FontAwesomeIcon icon={faChevronUp} /></div>
                             </div>
                         </div>
-                        <SalesTurnover />
+                        <SalesTurnover dots={dots} />
                         <div className="flex">
                             <div className="flex_item_five"></div>
                             <div className="flex_item_five">
                                 <div className="flex">
                                     <div className="flex_item_five">
-                                        <BestSelling products={this.state.products} />
+                                        <BestSelling products={this.state.products} dots={dots} />
                                     </div>
                                     <div className="flex_item_five">
-                                        <TopCompetitor competitors={this.state.competitors} />
+                                        <TopCompetitor competitors={this.state.competitors} dots={dots} />
                                     </div>
                                 </div>
                             </div>
