@@ -9,7 +9,8 @@ import './PeriodModal.css';
 class PeriodModal extends React.Component {
     state = {
         firstDay: undefined,
-        lastDay: undefined
+        lastDay: undefined,
+        selectedOption: ''
     };
 
     handleDayClick = (day, {selected, disabled}) => {
@@ -29,6 +30,59 @@ class PeriodModal extends React.Component {
         }
     };
 
+    onSelectOption = (event) => {
+        const clicked = event.target.id;
+        if(this.state.selectedOption === clicked) {
+            this.setState({selectedOption: ''})
+        } else {
+            this.setState({selectedOption: clicked})
+        }
+    };
+
+    renderedOptions() {
+        return (
+            <div className="flex_item_three modal_sidebar">
+                <div 
+                    className={`sidebar_item ${this.state.selectedOption === "today" ? 'selected' : ""}`} 
+                    onClick={this.onSelectOption} 
+                    id="today">
+                    Today
+                </div>
+                <div 
+                    className={`sidebar_item ${this.state.selectedOption === "yesterday" ? 'selected' : ""}`} 
+                    onClick={this.onSelectOption} 
+                    id="yesterday">
+                    Yesterday
+                </div>
+                <div 
+                    className={`sidebar_item ${this.state.selectedOption === "lastSevenDays" ? 'selected' : ""}`} 
+                    onClick={this.onSelectOption} 
+                    id="lastSevenDays">
+                    Last 7 days
+                </div>
+                <div 
+                    className={`sidebar_item ${this.state.selectedOption === "lastThirtyDays" ? 'selected' : ""}`} 
+                    onClick={this.onSelectOption}
+                    id="lastThirtyDays">
+                    Last 30 days
+                </div>
+                <div 
+                    className={`sidebar_item ${this.state.selectedOption === "thisMonth" ? 'selected' : ""}`} 
+                    onClick={this.onSelectOption}
+                    id="thisMonth">
+                    This Month
+                </div>
+                <div 
+                    className={`sidebar_item last ${this.state.selectedOption === "custom" ? "selected" : ""}`} 
+                    onClick={this.onSelectOption}
+                    id="custom">
+                    Custom
+                </div>
+                <div className="sidebar_btn">Apply</div>
+            </div>
+        );
+    };
+
     maximumMonth() {
         let d = new Date();
         let dFuture = new Date(d.setMonth(d.getMonth() - 6));
@@ -42,8 +96,6 @@ class PeriodModal extends React.Component {
     };
 
     render() {
-        console.log('firstday: ', this.state.firstDay)
-        console.log('lastday: ', this.state.lastDay)
         return (
             <div className="modal_container">
                 <div className="flex modal_header">
@@ -52,15 +104,7 @@ class PeriodModal extends React.Component {
                     <div className="flex_item_one times"><FontAwesomeIcon icon={faTimes} /></div>
                 </div>
                 <div className="flex modal_content">
-                    <div className="flex_item_three modal_sidebar">
-                        <div className="sidebar_item">Today</div>
-                        <div className="sidebar_item">Yesterday</div>
-                        <div className="sidebar_item">Last 7 days</div>
-                        <div className="sidebar_item">Last 30 days</div>
-                        <div className="sidebar_item">This Month</div>
-                        <div className="sidebar_item last">Custom</div>
-                        <div className="sidebar_btn">Apply</div>
-                    </div>
+                    {this.renderedOptions()}
                     <div className="flex_item_seven modal_calendar">
                         <DayPicker 
                             numberOfMonths={2} 

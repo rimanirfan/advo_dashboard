@@ -26,9 +26,15 @@
 }
 
 .sidebar_item {
+    cursor: pointer;
     width: 80%;
     padding: 1rem 0;
     border-bottom: rgba(0,0,0,0.5) 0.5px solid;
+}
+
+.sidebar_item.selected {
+    color: #37B04C;
+    font-weight: bolder;
 }
 
 .sidebar_item.last {
