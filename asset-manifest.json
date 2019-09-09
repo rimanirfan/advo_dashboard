@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/advo_dashboard/static/css/main.a9b4f41a.chunk.css",
+    "main.js": "/advo_dashboard/static/js/main.c594fcc3.chunk.js",
+    "main.js.map": "/advo_dashboard/static/js/main.c594fcc3.chunk.js.map",
+    "runtime~main.js": "/advo_dashboard/static/js/runtime~main.954f25ba.js",
+    "runtime~main.js.map": "/advo_dashboard/static/js/runtime~main.954f25ba.js.map",
+    "static/css/2.c6231af7.chunk.css": "/advo_dashboard/static/css/2.c6231af7.chunk.css",
+    "static/js/2.50461b32.chunk.js": "/advo_dashboard/static/js/2.50461b32.chunk.js",
+    "static/js/2.50461b32.chunk.js.map": "/advo_dashboard/static/js/2.50461b32.chunk.js.map",
+    "index.html": "/advo_dashboard/index.html",
+    "precache-manifest.2fc4b49fb0c3964e059d6406d66677a0.js": "/advo_dashboard/precache-manifest.2fc4b49fb0c3964e059d6406d66677a0.js",
+    "service-worker.js": "/advo_dashboard/service-worker.js",
+    "static/css/2.c6231af7.chunk.css.map": "/advo_dashboard/static/css/2.c6231af7.chunk.css.map",
+    "static/css/main.a9b4f41a.chunk.css.map": "/advo_dashboard/static/css/main.a9b4f41a.chunk.css.map",
+    "static/media/advo_logo.jpg": "/advo_dashboard/static/media/advo_logo.08d5a9c7.jpg",
+    "static/media/cart.svg": "/advo_dashboard/static/media/cart.da5d8ae5.svg",
+    "static/media/dashboard_icon.svg": "/advo_dashboard/static/media/dashboard_icon.9bb0ae89.svg",
+    "static/media/dots.svg": "/advo_dashboard/static/media/dots.5fd5bbaf.svg",
+    "static/media/minuman.jpg": "/advo_dashboard/static/media/minuman.75511e53.jpg"
+  }
+}
