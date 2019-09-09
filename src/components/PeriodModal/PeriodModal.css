@@ -37,14 +37,28 @@
 
 .sidebar_btn {
     width: 80%;
+    margin-top: 2rem;
     padding: 1rem 0;
     text-align: center;
     color: #fff;
     border-radius: 5px;
     background: #37B04C;
+    cursor: pointer;
 }
 
 .modal_calendar {
     padding-left: 2rem;
     border-left: rgba(0,0,0,0.5) 0.5px solid;
+    text-align: center;
+}
+
+.DayPicker-Day--selected {
+    background-color: rgb(171, 235, 181) !important;
+    color: #37b04c !important;
+    font-weight: 800;
+}
+
+.DayPicker-Day--today {
+    color: #37b04c !important;
+    font-weight: 800;
 }

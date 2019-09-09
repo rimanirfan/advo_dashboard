@@ -56,7 +56,6 @@
     position: relative;
     background: #f7f7f7;
     padding: 2rem;
-    z-index: -1;
 }
 
 .content .header_app {

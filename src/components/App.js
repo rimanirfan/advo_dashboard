@@ -35,7 +35,7 @@ class App extends React.Component {
             {id: 5, name: 'Minuman Pink', price: '10000', sold: 19},
         ],
         chartData: {
-            labels: ['Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur', 'Sun'],
+            labels: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
             datasets: [
                 {
                     label: '',

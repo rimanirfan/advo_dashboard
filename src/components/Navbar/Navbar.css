@@ -6,6 +6,8 @@
 .ui.secondary.menu.navbar{
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     margin:0;
+    position: relative;
+    z-index: 1;
 }
 
 .ui.secondary.menu.navbar .company_logo_img{
