@@ -83,9 +83,29 @@ class PeriodModal extends React.Component {
         }
     };
 
+    setFilterPeriod = () => {
+        const months = [
+            'January', 
+            'February', 
+            'March',
+            'April', 
+            'May', 
+            'June', 
+            'July',
+            'August', 
+            'September', 
+            'October',
+            'November', 
+            'December'
+        ]
+        const from = `${this.state.firstDay.getDate()} ${months[this.state.firstDay.getMonth()]} ${this.state.firstDay.getFullYear()}`
+        const to = `${this.state.lastDay.getDate()} ${months[this.state.lastDay.getMonth()]} ${this.state.lastDay.getFullYear()}`
+        const filter = `${from} - ${to}`;
+
+        this.props.onApplyFilter(filter);
+    };
+
     setHighlightedOption() {
-        console.log(this.state.firstDay.getDate());
-        console.log(this.getYesterday().getDate());
         if(this.state.firstDay.getDate() === this.getYesterday().getDate()) {
             this.setState({selectedOption: 'yesterday'})
             return
@@ -104,6 +124,7 @@ class PeriodModal extends React.Component {
         }
         this.setState({selectedOption: 'custom'})
     };
+
 
     renderedOptions() {
         return (
@@ -142,7 +163,7 @@ class PeriodModal extends React.Component {
                     id="custom">
                     Custom
                 </div>
-                <div className="sidebar_btn">Apply</div>
+                <div className="sidebar_btn" onClick={this.setFilterPeriod}>Apply</div>
             </div>
         );
     };

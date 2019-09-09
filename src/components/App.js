@@ -51,7 +51,12 @@ class App extends React.Component {
                     backgroundColor: '#37B04C'
                 }
             ]
-        }
+        },
+        filter: 'No filter applied'
+    };
+
+    onApplyFilter = (date) => {
+        this.setState({filter: date});
     };
 
     render() {
@@ -63,10 +68,10 @@ class App extends React.Component {
                         <Sidebar dashboardIcon={dashboardIcon} FontAwesomeIcon={FontAwesomeIcon} faBars={faBars} />
                     </div>
                     <div className="flex_item_nine content">
-                        <PeriodModal />
+                        <PeriodModal onApplyFilter={this.onApplyFilter} />
                         <div className="flex header_container">
                             <div className="header_app flex_item_seven">Dashboard</div>
-                            <Period FontAwesomeIcon={FontAwesomeIcon} faChevronDown={faChevronDown} />
+                            <Period FontAwesomeIcon={FontAwesomeIcon} faChevronDown={faChevronDown} filter={this.state.filter} />
                         </div>
                         <div className="flex green_menu">
                             <div className="flex_item_seven green_menu_header">Market Insights</div>
