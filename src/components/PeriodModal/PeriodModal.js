@@ -179,6 +179,7 @@ class PeriodModal extends React.Component {
                                 from: this.state.firstDay,
                                 to: this.state.lastDay
                             }}}
+                            initialMonth={this.getLastMonth()}
                             fromMonth={this.maximumMonth()}
                         />
                     </div>
