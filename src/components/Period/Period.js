@@ -4,10 +4,10 @@ import { faChevronDown, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 
 import './Period.css';
 
-const Period = ({filter}) => {
+const Period = ({filter, triggerPeriodModal}) => {
     return (
         <div className="flex_item_three">
-            <div className="flex period_container">
+            <div className="flex period_container" onClick={triggerPeriodModal}>
                 <div className="period_item"><FontAwesomeIcon icon={faCalendarAlt} /></div>
                 <div className="period_item">Period</div>
                 <div className="period_item">{filter}</div>

@@ -103,6 +103,7 @@ class PeriodModal extends React.Component {
         const filter = `${from} - ${to}`;
 
         this.props.onApplyFilter(filter);
+        this.props.triggerPeriodModal();
     };
 
     setHighlightedOption() {
@@ -186,7 +187,7 @@ class PeriodModal extends React.Component {
                 <div className="flex modal_header">
                     <div className="flex_item_one"><FontAwesomeIcon icon={faCalendarAlt} /></div>
                     <div className="flex_item_seven">Period</div>
-                    <div className="flex_item_one times"><FontAwesomeIcon icon={faTimes} /></div>
+                    <div className="flex_item_one times" onClick={this.props.triggerPeriodModal} ><FontAwesomeIcon icon={faTimes} /></div>
                 </div>
                 <div className="flex modal_content">
                     {this.renderedOptions()}

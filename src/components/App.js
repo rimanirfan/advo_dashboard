@@ -52,7 +52,12 @@ class App extends React.Component {
                 }
             ]
         },
-        filter: 'No filter applied'
+        filter: 'No filter applied',
+        showModal: false
+    };
+
+    triggerPeriodModal = () => {
+        this.setState({showModal: !this.state.showModal});
     };
 
     onApplyFilter = (date) => {
@@ -68,10 +73,10 @@ class App extends React.Component {
                         <Sidebar dashboardIcon={dashboardIcon} FontAwesomeIcon={FontAwesomeIcon} faBars={faBars} />
                     </div>
                     <div className="flex_item_nine content">
-                        <PeriodModal onApplyFilter={this.onApplyFilter} />
+                        {this.state.showModal && <PeriodModal onApplyFilter={this.onApplyFilter} triggerPeriodModal={this.triggerPeriodModal} />}
                         <div className="flex header_container">
                             <div className="header_app flex_item_seven">Dashboard</div>
-                            <Period FontAwesomeIcon={FontAwesomeIcon} faChevronDown={faChevronDown} filter={this.state.filter} />
+                            <Period FontAwesomeIcon={FontAwesomeIcon} faChevronDown={faChevronDown} filter={this.state.filter} triggerPeriodModal={this.triggerPeriodModal} />
                         </div>
                         <div className="flex green_menu">
                             <div className="flex_item_seven green_menu_header">Market Insights</div>
