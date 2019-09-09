@@ -1,6 +1,6 @@
 .ui.secondary.vertical.menu {
     margin:0;
-    height: calc(100vh - 84px);
+    height: 100vh;
     width: 72px;
     padding: 0;
     border-right: rgba(0,0,0,0.2) 0.5px solid;

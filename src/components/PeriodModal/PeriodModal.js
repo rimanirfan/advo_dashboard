@@ -10,7 +10,8 @@ class PeriodModal extends React.Component {
     state = {
         firstDay: undefined,
         lastDay: undefined,
-        selectedOption: ''
+        selectedOption: '',
+        showWarning: false
     };
 
     handleDayClick = (day, {selected, disabled}) => {
@@ -84,6 +85,11 @@ class PeriodModal extends React.Component {
     };
 
     setFilterPeriod = () => {
+        if(!this.state.firstDay || !this.state.lastDay) {
+            this.setState({showWarning: true});
+            return
+        };
+
         const months = [
             'January', 
             'February', 
@@ -102,7 +108,7 @@ class PeriodModal extends React.Component {
         const to = `${this.state.lastDay.getDate()} ${months[this.state.lastDay.getMonth()]} ${this.state.lastDay.getFullYear()}`
         const filter = `${from} - ${to}`;
 
-        this.props.onApplyFilter(filter);
+        this.props.onApplyFilter(filter, this.state.firstDay, this.state.lastDay);
         this.props.triggerPeriodModal();
     };
 
@@ -204,6 +210,7 @@ class PeriodModal extends React.Component {
                             initialMonth={this.getLastMonth()}
                             fromMonth={this.maximumMonth()}
                         />
+                        {this.state.showWarning && <div className="warning">Please select a date</div>}
                     </div>
                 </div>
             </div>
