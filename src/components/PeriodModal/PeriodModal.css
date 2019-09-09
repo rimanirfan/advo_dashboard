@@ -26,6 +26,7 @@
 }
 
 .sidebar_item {
+    font-size: 1.2rem;
     cursor: pointer;
     width: 80%;
     padding: 1rem 0;
@@ -37,7 +38,12 @@
     font-weight: bolder;
 }
 
+.sidebar_item.first {
+    cursor: inherit;
+}
+
 .sidebar_item.last {
+    cursor: inherit;
     border: none;
 }
 

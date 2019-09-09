@@ -18,7 +18,7 @@ class PeriodModal extends React.Component {
             return;
         }
         if(selected) {
-            this.setState({firstDay: undefined, lastDay: undefined});
+            this.setState({firstDay: undefined, lastDay: undefined, selectedOption: ''});
         }
         if(!this.state.firstDay) {
             this.setState({firstDay: day});
@@ -26,25 +26,90 @@ class PeriodModal extends React.Component {
         }
         if(!this.state.lastDay) {
             this.setState({lastDay: day});
+            this.setHighlightedOption();
             return;
         }
     };
 
+    getYesterday() {
+        let d = new Date();
+        const yesterday = new Date(d.setDate(d.getDate() - 1));
+        return yesterday;
+    };
+
+    getLastWeek() {
+        let d = new Date();
+        const lastWeek = new Date(d.setDate(d.getDate() - 7));
+        return lastWeek;
+    };
+
+    getLastMonth() {
+        let d = new Date();
+        const lastMonth = new Date(d.setDate(d.getDate() - 30));
+        return lastMonth;
+    };
+
+    getThisMonth() {
+        let d = new Date();
+        const firstDateofTheMonth = new Date(d.getFullYear(), d.getMonth(), 1);
+        return firstDateofTheMonth
+    }
+
     onSelectOption = (event) => {
+       
         const clicked = event.target.id;
         if(this.state.selectedOption === clicked) {
-            this.setState({selectedOption: ''})
+            this.setState({selectedOption: '', firstDay: undefined, lastDay: undefined});
+            return;
         } else {
             this.setState({selectedOption: clicked})
         }
+        
+        switch(clicked) {
+            case 'yesterday':
+                this.setState({firstDay: this.getYesterday(), lastDay: this.getYesterday()});
+                break;
+            case 'lastSevenDays':
+                this.setState({firstDay: this.getLastWeek(), lastDay: this.getYesterday()});
+                break;
+            case 'lastThirtyDays':
+                this.setState({firstDay: this.getLastMonth(), lastDay: this.getYesterday()});
+                break;
+            case 'thisMonth':
+                this.setState({firstDay: this.getThisMonth(), lastDay: this.getYesterday()});
+                break;
+            default:
+                break;
+        }
+    };
+
+    setHighlightedOption() {
+        console.log(this.state.firstDay.getDate());
+        console.log(this.getYesterday().getDate());
+        if(this.state.firstDay.getDate() === this.getYesterday().getDate()) {
+            this.setState({selectedOption: 'yesterday'})
+            return
+        }
+        if(this.state.firstDay.getDate() === this.getLastWeek().getDate()) {
+            this.setState({selectedOption: 'lastSevenDays'})
+            return
+        }
+        if(this.state.firstDay.getDate() === this.getLastMonth().getDate()) {
+            this.setState({selectedOption: 'lastThirtyDays'})
+            return
+        }
+        if(this.state.firstDay.getDate() === this.getThisMonth().getDate()) {
+            this.setState({selectedOption: 'thisMonth'})
+            return
+        }
+        this.setState({selectedOption: 'custom'})
     };
 
     renderedOptions() {
         return (
             <div className="flex_item_three modal_sidebar">
                 <div 
-                    className={`sidebar_item ${this.state.selectedOption === "today" ? 'selected' : ""}`} 
-                    onClick={this.onSelectOption} 
+                    className="sidebar_item first" 
                     id="today">
                     Today
                 </div>
@@ -74,7 +139,6 @@ class PeriodModal extends React.Component {
                 </div>
                 <div 
                     className={`sidebar_item last ${this.state.selectedOption === "custom" ? "selected" : ""}`} 
-                    onClick={this.onSelectOption}
                     id="custom">
                     Custom
                 </div>
